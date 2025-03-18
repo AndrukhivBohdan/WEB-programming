@@ -14,8 +14,6 @@ class Variable {
     }
 }
 
-//якась зміна
-
 function triangle(value1,name1,value2,name2){
 
     const variable1 = new Variable(value1, name1);
@@ -42,10 +40,6 @@ function triangle(value1,name1,value2,name2){
                     a = element.value;
                     b = another.value;
                     c=Math.sqrt(a*a+b*b);
-
-                    let aaa = Math.atan(a/b);
-                    let bbb = Math.atan(b/a);
-
                     alpha = radiansToDegrees(aaa);
                     beta = radiansToDegrees(bbb);
                     showData(a, b, c, alpha, beta);
@@ -107,7 +101,7 @@ function triangle(value1,name1,value2,name2){
     function degreesToRadians(angle){
         return angle*Math.PI/180;
     }
-    function radiansToDegrees(angle){// ???????????
+    function radiansToDegrees(angle){
         return angle/Math.PI*180;
     }
 
@@ -164,6 +158,3 @@ function triangle(value1,name1,value2,name2){
         return true;
     }
 }
-
-
-triangle(3, "opposite angle", 855959, "leg")
