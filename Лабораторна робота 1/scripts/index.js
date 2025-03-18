@@ -28,7 +28,7 @@ function triangle(value1,name1,value2,name2){
 
     if(!checkValue(mas)){
         console.log("Некоректно уведені значення");
-        return 0;
+        return "failed";
     }
 
     for(let i = 0;i<mas.length;i++){
@@ -42,24 +42,28 @@ function triangle(value1,name1,value2,name2){
                     a = element.value;
                     b = another.value;
                     c=Math.sqrt(a*a+b*b);
-                    alpha = Math.atan(a/b);
-                    beta = Math.atan(b/a);
+
+                    let aaa = Math.atan(a/b);
+                    let bbb = Math.atan(b/a);
+
+                    alpha = radiansToDegrees(aaa);
+                    beta = radiansToDegrees(bbb);
                     showData(a, b, c, alpha, beta);
                     break;
                 case "hypotenuse":
                     a = element.value;
                     c=another.value;
                     b = Math.sqrt(c**2-a**2);
-                    alpha = Math.atan(a/b);
-                    beta = Math.atan(b/a);
+                    alpha =radiansToDegrees(Math.atan(a/b));
+                    beta = radiansToDegrees(Math.atan(b/a));
                     showData(a, b, c, alpha, beta);
                     break;  
                 case "adjacent angle":
                     a = element.value;
                     beta = another.value;
-                    alpha = 90-beta;
-                    b = a*Math.tan(degreesToRadians(alpha));
-                    c=a/Math.cos(degreesToRadians(beta));
+                    alpha = 90 - beta;
+                    b = a*Math.tan(degreesToRadians(beta));
+                    c = a/Math.cos(degreesToRadians(beta));
                     showData(a, b, c, alpha, beta);
                     break;
                 case "opposite angle":
@@ -77,8 +81,8 @@ function triangle(value1,name1,value2,name2){
         // Що краще? запис зверху чи знизу 
         else if(element.name == "angle"){
             showData(//another це гіпотинуза
-                another.value*Math.sin(degreesToRadians(element.value)), // a
-                another.value*Math.sin(degreesToRadians(90 - element.value)), // b
+                another.value*Math.sin(element.value*Math.PI/180), // a
+                another.value*Math.sin(90 - element.value*Math.PI/180), // b
                 another.value, // c
                 element.value, // alpha
                 90 - element.value // beta
@@ -96,12 +100,15 @@ function triangle(value1,name1,value2,name2){
         console.log("a = "+a);
         console.log("b = "+b);
         console.log("c = "+c);
-        console.log("alpha = "+alpha);
-        console.log("beta = "+beta);
+        console.log("alpha = " + alpha);
+        console.log("beta = " + beta);
     }
 
     function degreesToRadians(angle){
         return angle*Math.PI/180;
+    }
+    function radiansToDegrees(angle){// ???????????
+        return angle/Math.PI*180;
     }
 
     function checkValue(mas) {
@@ -116,13 +123,14 @@ function triangle(value1,name1,value2,name2){
             switch (element.name) {
                 case "leg":
                 case "hypotenuse":
-                    if (element.value <= 0) return false;
+                    if (isNaN(element.value) || element.value <= 0 || Math.atan(element.value/another.value) > 1.57079632679) return false;
                     break;
     
                 case "adjacent angle":
                 case "opposite angle":
                 case "angle":
                     if (element.value <= 0 || element.value >= 90) return false;
+                    if (element.value < 0.000000000001) return false;
                     break;
             }
         }
@@ -158,3 +166,4 @@ function triangle(value1,name1,value2,name2){
 }
 
 
+triangle(3, "opposite angle", 855959, "leg")
