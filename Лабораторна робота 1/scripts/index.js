@@ -40,8 +40,8 @@ function triangle(value1,name1,value2,name2){
                     a = element.value;
                     b = another.value;
                     c=Math.sqrt(a*a+b*b);
-                    alpha = radiansToDegrees(aaa);
-                    beta = radiansToDegrees(bbb);
+                    alpha =radiansToDegrees(Math.atan(a/b));
+                    beta = radiansToDegrees(Math.atan(b/a));
                     showData(a, b, c, alpha, beta);
                     break;
                 case "hypotenuse":
