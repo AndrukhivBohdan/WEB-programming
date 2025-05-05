@@ -48,7 +48,7 @@ function triangle(value1,name1,value2,name2){
                     a = element.value;
                     c=another.value;
                     b = Math.sqrt(c**2-a**2);
-                    alpha =radiansToDegrees(Math.atan(a/b));
+                    alpha = radiansToDegrees(Math.atan(a/b));
                     beta = radiansToDegrees(Math.atan(b/a));
                     showData(a, b, c, alpha, beta);
                     break;  

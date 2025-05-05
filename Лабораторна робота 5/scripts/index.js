@@ -3,19 +3,23 @@ const difficultySelect = document.getElementById('difficulty');
 const colorSelect = document.getElementById('color');
 
 
+let gameActive = false;
+
 
 startButton.addEventListener('click', function() {
+
+    if (gameActive) return;
+
     let score = 0;
     let timeLeft = 0;
     let intervalId = null;
-    let gameActive = false;
     let initialTime = 0;
 
     if (colorSelect.value == 0 || difficultySelect.value == 0) {
         return;
     }
 
-    const selectedColor = colorSelect.value.toLowerCase();
+    const selectedColor = colorSelect.value;
     const selectedDifficulty = parseInt(difficultySelect.value);
 
     document.body.innerHTML = '';
@@ -76,7 +80,7 @@ startButton.addEventListener('click', function() {
     
         let moveRange;
         if (selectedDifficulty === 4) moveRange = 500;
-        else if (selectedDifficulty === 2) moveRange = 700;
+        else if (selectedDifficulty === 2) moveRange = 900;
         else moveRange = 1500; 
     
         const deltaX = (Math.random() - 0.5) * moveRange;
