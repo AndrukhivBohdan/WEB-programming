@@ -62,7 +62,7 @@ function renderField(map) {
       cell.dataset.row = i;
       cell.dataset.col = j;
 
-      cell.style.backgroundColor = map[i][j] === 0 ? 'white' : 'black';
+      cell.style.backgroundColor = map[i][j] === 1 ? 'white' : 'black';
 
       field.appendChild(cell);
     }
