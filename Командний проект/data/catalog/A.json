@@ -3,7 +3,7 @@
     {
       "id": 11,
       "short_name": "A",
-      "product_name": "Portland Cement 25kg",
+      "product_name": "Portland Cement",
       "description": "Найпопулярніший цемент для загального будівництва. Ідеальний для фундаментів та кладки.",
       "price": 150,
       "discount": 20,
@@ -13,7 +13,7 @@
     {
       "id": 12,
       "short_name": "B",
-      "product_name": "White Cement 25kg",
+      "product_name": "White Cement",
       "description": "Білий цемент для декоративного оздоблення та дизайнерських рішень.",
       "price": 170,
       "discount": 0,
