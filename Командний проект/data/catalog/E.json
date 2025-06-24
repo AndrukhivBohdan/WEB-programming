@@ -3,7 +3,7 @@
     {
       "id": 51,
       "short_name": "A",
-      "product_name": "Nails 100mm 1kg",
+      "product_name": "Nails 100mm",
       "description": "Сталеві цвяхи ідеально підходять для дерев'яних каркасів і теслярських робіт.",
       "price": 40,
       "discount": 5,
@@ -43,7 +43,7 @@
   ],
   "category": {
     "short_name": "E",
-    "CategoryName": "Fasteners",
-    "special_instructions": "Keep dry"
+    "CategoryName": "Кріплення",
+    "special_instructions": "Кріпильні елементи є незамінною складовою будь-якого будівництва, ремонту чи монтажу."
   }
 }
