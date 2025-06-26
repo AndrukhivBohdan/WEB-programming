@@ -37,10 +37,10 @@ function Truck(color,weight,avgSpeed,brand,model){
 
     //9
     this.trip = function(){
+        
         if(!this.driver){
             console.log("No driver assigned");
-        }
-        else{
+        }else{
             console.log(
                 `Driver ${this.driver.name} ` + 
                 (this.driver.nightDriving ? "drives at night" : "does not drive at night") + 
