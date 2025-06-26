@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Сортування масиву</title>
+</head>
+<body>
+  <main>
+    <h1>Сортування масиву</h1>
+
+    <section>
+      <fieldset>
+        <legend>Вхідні дані</legend>
+
+        <div>
+          <label for="arrayInput">Введіть цілі числа через кому:</label><br />
+          <input type="text" id="arrayInput" placeholder="наприклад: 5,3,8,1" />
+        </div>
+
+        <div>
+          <label for="sortMethod">Метод сортування:</label><br />
+          <select id="sortMethod">
+            <option value="sortExchange">Обміну</option>
+            <option value="sortMinElements">Мінімальних елементів</option>
+            <option value="sortInserts">Вставок</option>
+            <option value="sortShell">Шелла</option>
+            <option value="sortHoare">Хоара</option>
+          </select>
+        </div>
+
+        <div>
+          <input type="checkbox" id="ascending" checked />
+          <label for="ascending">Сортувати за зростанням</label>
+        </div>
+
+        <div>
+          <button id="sortButton">Сортувати</button>
+        </div>
+      </fieldset>
+    </section>
+
+    <section>
+      <h2>Результат</h2>
+      <pre id="output" style="white-space: pre-wrap;"></pre>
+    </section>
+  </main>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
