@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>БудМаркет</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/simulation.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="page-wrapper">
+      <header>
+        <nav id="header-nav">
+          <div class="nav-container">
+            <div class="navbar-brand">
+              <a href="index.html" class="logo"></a>
+              <div class="brand-text">
+                <a href="index.html" class="brand-name">БудМаркет</a>
+              </div>
+            </div>
+
+            <button id="menu-toggle">&#9776;</button>
+
+            <ul class="nav-menu" id="nav-list">
+              <li>
+                <a href="index.html" id="navHomeButton">🏠<br />Home</a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  id="navCatalogButton"
+                  onclick="$ns.loadCatalogCategories();"
+                  >🛍️<br />Catalog</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="$ns.about();">ℹ️<br />About</a>
+              </li>
+              <li class="phone">
+                <a href="tel:(555)555-44-55">📞 (096)380-36-31</a>
+                <div>* Contact us</div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div id="main-content" class="container"></div>
+
+      <footer>
+        <div class="footer-container">
+          <section class="footer-section">
+            <h3>Графік роботи:</h3>
+            <p>Пн–Пт: 09:00 – 18:00</p>
+            <p>Сб: 10:00 – 16:00</p>
+            <p>Нд: вихідний</p>
+            <p class="note">
+              * Онлайн-магазин працює цілодобово. Обробка замовлень лише в
+              робочі години.
+            </p>
+          </section>
+
+          <section class="footer-section">
+            <h3>Адреса:</h3>
+            <p>вул. Сухомлинського, 2</p>
+            <p>м. Івано-Франківськ, Україна, 76000</p>
+          </section>
+
+          <section class="footer-section">
+            <h3>Розробники:</h3>
+            <p>Андрухів Богдан Володимирович</p>
+            <p>Айб Олександр Романович</p>
+            <p>Горайчук Михайло Олександрович</p>
+          </section>
+        </div>
+
+        <div class="footer-bottom">
+          © 2025 Магазин «БудМаркет». Усі права захищено.
+        </div>
+      </footer>
+
+      <script src="scripts/ajax-utils.js"></script>
+      <script src="scripts/Buyer.js"></script>
+      <script src="scripts/script.js"></script>
+      <script src="scripts/simulation.js"></script>
+    </div>
+  </body>
+</html>
