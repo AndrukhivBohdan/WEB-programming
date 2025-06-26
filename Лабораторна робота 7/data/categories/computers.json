@@ -1,0 +1,41 @@
+{
+  "categoryName": "Комп'ютерна техніка",
+  "shortname": "computers",
+  "items": [
+    {
+      "id": 1,
+      "name": "Ноутбук Lenovo IdeaPad 3",
+      "shortname": "laptop-lenovo",
+      "description": "15.6'' FHD, AMD Ryzen 5, 8GB RAM, 512GB SSD.",
+      "price": "22000₴"
+    },
+    {
+      "id": 2,
+      "name": "Планшет Samsung Galaxy Tab A9",
+      "shortname": "tablet-samsung",
+      "description": "8.7'' дисплей, 64GB пам'яті, Android 13.",
+      "price": "8500₴"
+    },
+    {
+      "id": 3,
+      "name": "Навушники Logitech G435",
+      "shortname": "headphones-logitech",
+      "description": "Бездротові, ігрові, з мікрофоном.",
+      "price": "2400₴"
+    },
+    {
+      "id": 4,
+      "name": "Клавіатура Redragon Kumara K552",
+      "shortname": "keyboard-redragon",
+      "description": "Механічна, підсвітка, англійська розкладка.",
+      "price": "1700₴"
+    },
+    {
+      "id": 5,
+      "name": "Настільний комп’ютер Expert PC",
+      "shortname": "desktop-pc",
+      "description": "Intel i5, 16GB RAM, SSD 512GB, GTX 1660.",
+      "price": "31000₴"
+    }
+  ]
+}

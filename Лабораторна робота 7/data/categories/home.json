@@ -1,0 +1,41 @@
+{
+  "categoryName": "Товари для дому",
+  "shortname": "home",
+  "items": [
+    {
+      "id": 1,
+      "name": "Набір побутових інструментів",
+      "shortname": "house-toolkit",
+      "description": "Універсальний набір з 60 елементів для дому.",
+      "price": "600₴"
+    },
+    {
+      "id": 2,
+      "name": "Кухонний набір ножів",
+      "shortname": "kitchen-knives",
+      "description": "5 ножів із нержавіючої сталі + підставка.",
+      "price": "300₴"
+    },
+    {
+      "id": 3,
+      "name": "Настільний степлер",
+      "shortname": "desk-stapler",
+      "description": "Пластиковий степлер для документів, 25 аркушів.",
+      "price": "250₴"
+    },
+    {
+      "id": 4,
+      "name": "Пістолет для герметика",
+      "shortname": "sealant-gun",
+      "description": "Механічний, для картриджів 300 мл.",
+      "price": "180₴"
+    },
+    {
+      "id": 5,
+      "name": "Акумуляторний дриль-шурупокрут",
+      "shortname": "cordless-drill",
+      "description": "18V, 2 акумулятори, кейс у комплекті.",
+      "price": "2000₴"
+    }
+  ]
+}
