@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(138, 8, 107);
+  padding: 1em;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+}
+
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+
+.menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 2em auto;
+  height: 300px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2em;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  z-index: 3;
+}
+
+.dots button {
+  display: inline-block; /* добре */
+  border: none;
+  background-color: gray;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots button.active {
+  background-color: black;
+}
+
+
+.large-images,
+.medium-images {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.medium-images {
+  display: none;
+}
+
+/* --- Media queries --- */
+@media screen and (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    flex-direction: column;
+    padding: 0.5em;
+    display: none;
+    width: 200px;
+  }
+
+  .menu li a {
+    color: black;
+  }
+
+  .menu.show {
+    display: flex;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  .large-images {
+    display: none;
+  }
+
+  .medium-images {
+    display: flex;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

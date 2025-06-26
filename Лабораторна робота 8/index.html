@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Адаптивна сторінка</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">MySite</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <ul class="menu">
+      <li><a href="#">Головна</a></li>
+      <li><a href="#">Про нас</a></li>
+      <li><a href="#">Послуги</a></li>
+      <li><a href="#">Контакти</a></li>
+      <li><a href="#">Підтримка</a></li>
+    </ul>
+  </nav>
+
+  <div class="carousel">
+    <div class="slides">
+      <img src="images/text1.png" class="slide">
+      <img src="images/text2.png" class="slide">
+      <img src="images/text3.png" class="slide">
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">‹</button>
+    <button class="next" onclick="changeSlide(1)">›</button>
+    <div class="dots"></div>
+  </div>
+
+  <div class="large-images">
+    <img src="images/Large1.png">
+    <img src="images/Large2.png">
+  </div>
+
+  <div class="medium-images">
+    <img src="images/Medium1.png">
+    <img src="images/Medium2.png" />
+  </div>
+  
+  <script src="scripts/script.js"></script>
+</body>
+</html>
