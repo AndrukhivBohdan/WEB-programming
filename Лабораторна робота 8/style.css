@@ -96,7 +96,7 @@ body {
 }
 
 .dots button {
-  display: inline-block; /* добре */
+  display: inline-block;
   border: none;
   background-color: gray;
   width: 10px;
@@ -123,7 +123,6 @@ body {
   display: none;
 }
 
-/* --- Media queries --- */
 @media screen and (max-width: 767px) {
   .hamburger {
     display: block;
